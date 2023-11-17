@@ -12,22 +12,21 @@ import './navbar.scss';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  // className={showNav ? '' : 'invisible'}
   return (
     <>
       <nav id='navigation'>
-        <div id={showNav ? 'menu-logo' : 'logo'}>
+        <div id='logo'>
           <h1>
-            <Link to='/'>{'<A/>'}</Link>
+            <Link to='/' onClick={() => setShowNav(false)}>
+              {'<A/>'}
+            </Link>
           </h1>
           <p>Alfred</p>
         </div>
 
-        <div id='hamburger-menu'>
-          <FaBars onClick={() => setShowNav(true)} />
-        </div>
-
-        <div id='navigation-menu' className={showNav ? 'visible' : 'invisible'}>
-          <div id='close-menu'>
+        <div id='navigation-menu'>
+          <div className='close-menu'>
             <FaX onClick={() => setShowNav(false)} />
           </div>
 
@@ -100,6 +99,10 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+
+      <div className={showNav ? 'invisible' : 'open-menu'}>
+        <FaBars onClick={() => setShowNav(true)} />
+      </div>
     </>
   );
 };
