@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
-const Project = ({ Cover, Title, Description }) => {
+const Project = (project) => {
+  const { Cover, Title, Description } = project
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const handleResize = () => {
@@ -20,7 +21,7 @@ const Project = ({ Cover, Title, Description }) => {
   const handleClick = () => {
     if (isMobile) {
       // Render or perform actions for mobile
-      alert('Mobile click');
+      alert(Title);
     }
   };
 
