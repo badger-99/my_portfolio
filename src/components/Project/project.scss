@@ -1,5 +1,4 @@
 @import '../../_colors.scss';
-
 .project-box {
   position: relative;
 
@@ -13,8 +12,8 @@
   }
 
   .popup {
-    background:$tint;
-    color: $accent1;
+    background: rgba(51, 51, 77, 0.9);
+    color: rgb(255, 255, 255);
     position: absolute;
     top: 0;
     left: 0;

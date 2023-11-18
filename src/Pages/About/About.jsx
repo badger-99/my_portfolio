@@ -1,6 +1,8 @@
 const About = () => {
   return (
-    <div>About</div>
+    <section className="pages" id="about">
+      <h1>About</h1>
+    </section>
   )
 }
 export default About
