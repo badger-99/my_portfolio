@@ -1,0 +1,47 @@
+.project-box {
+  position: relative;
+
+  .project {
+    .screenshot {
+      object-fit: cover;
+      width: 100%;
+      height: 12.5rem;
+    }
+  }
+
+  .popup {
+    background: rgba(51, 51, 77, 0.9);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .close-popup {
+      align-self: flex-end;
+      margin: 1rem;
+    }
+  
+    .project-links {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      font-size: 2rem;
+    }
+  
+    .project-stack {
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+      display: inherit;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}
+

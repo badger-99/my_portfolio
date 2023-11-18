@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import PopUp from '../Mobile_Popup/PopUp';
+import './project.scss'
 
 const Project = (project) => {
   const { Cover, Title, Stack, Description, Demo, Code } = project;
@@ -32,7 +33,7 @@ const Project = (project) => {
   };
 
   return (
-    <>
+    <div className='project-box'>
       <div className='project' onClick={openPopUp}>
         <img src={Cover} alt={Title} className='screenshot' />
         <div className='project-details'>
@@ -41,7 +42,7 @@ const Project = (project) => {
         </div>
       </div>
       {showPopUp && <PopUp popData={popData} close={closePopUp} />}
-    </>
+    </div>
   );
 };
 export default Project;
