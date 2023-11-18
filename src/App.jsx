@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-import Layout from './Pages/Layout/Layout';
-import Home from './Pages/Home/Home';
-import About from './Pages/About/About';
-import Portfolio from './Pages/Portfolio/Portfolio';
-import Contact from './Pages/Contact/Contact';
+import Layout from './pages/Layout/Layout';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Portfolio from './pages/Portfolio/Portfolio';
+import Contact from './pages/Contact/Contact';
 import './app.scss';
 
 const App = () => {
