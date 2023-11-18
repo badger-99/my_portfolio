@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import PopUp from '../Mobile_Popup/PopUp';
 
 const Project = (project) => {
-  const { Cover, Title, Description } = project
+  const { Cover, Title, Stack, Description, Demo, Code } = project;
+  const popData = { Stack, Demo, Code };
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [showPopUp, setShowPopUp] = useState(false);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
@@ -18,21 +21,27 @@ const Project = (project) => {
     };
   }, []);
 
-  const handleClick = () => {
+  const openPopUp = () => {
     if (isMobile) {
-      // Render or perform actions for mobile
-      alert(Title);
+      setShowPopUp(true);
     }
   };
 
+  const closePopUp = () => {
+    setShowPopUp(!showPopUp);
+  };
+
   return (
-    <div className='project' onClick={handleClick}>
-      <img src={Cover} alt={Title} className='screenshot' />
-      <div className='project-details'>
-        <h4 className='title'>{Title}</h4>
-        <p className='description'>{Description}</p>
+    <>
+      <div className='project' onClick={openPopUp}>
+        <img src={Cover} alt={Title} className='screenshot' />
+        <div className='project-details'>
+          <h4 className='title'>{Title}</h4>
+          <p className='description'>{Description}</p>
+        </div>
       </div>
-    </div>
+      {showPopUp && <PopUp popData={popData} close={closePopUp} />}
+    </>
   );
 };
 export default Project;
