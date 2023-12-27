@@ -1,1 +1,14 @@
 @import '../../_colors.scss';
+
+#contact{
+  p{
+    margin-top: 1rem;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
