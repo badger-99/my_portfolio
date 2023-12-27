@@ -15,8 +15,7 @@ const Contact = () => {
   const public_key = import.meta.env.VITE_PUBLIC_KEY;
 
   const validateEmail = (email) => {
-    const regex =
-      /^[\w]+(\.[\w-]+)?@[\w]+(\.[\w]+)*\.[\w]+$/;
+    const regex = /^[\w]+(\.[\w-]+)?@[\w]+(\.[\w]+)*\.[\w]+$/;
     return regex.test(email);
   };
 
@@ -49,9 +48,9 @@ const Contact = () => {
         have a chat, please don't hesitate to get in touch.
       </p>
       <div className='contact-form'>
+        {isSuccess && <p className='form-feedback'>{success}</p>}
+        {isError && <p className='form-feedback'>{error}</p>}
         <form ref={form} onSubmit={sendForm}>
-          {isSuccess && <p>{success}</p>}
-          {isError && <p>{error}</p>}
           <input type='text' name='name' placeholder='Name' required />
           <input type='email' name='email' placeholder='Email' required />
           <textarea name='message' placeholder='Message' required></textarea>
