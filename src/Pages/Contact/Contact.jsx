@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import './contact.scss';
 
@@ -22,8 +22,8 @@ const Contact = () => {
   const sendForm = (e) => {
     e.preventDefault();
 
-    const inputEmail = form.current.email.value;
-    if (!validateEmail(inputEmail)) {
+    // const inputEmail = form.current.email.value;
+    if (!validateEmail(form.current.email.value)) {
       setIsError(true);
       setError('Please enter a valid email address');
       return;
@@ -33,6 +33,7 @@ const Contact = () => {
       (result) => {
         setIsSuccess(true);
         setSuccess(result.text);
+        form.current.reset()
       },
       (error) => {
         setIsError(true);
@@ -40,6 +41,22 @@ const Contact = () => {
       }
     );
   };
+
+  const resetStates = () => {
+    setError(null)
+    setIsError(false)
+    setSuccess(null)
+    setIsSuccess(false)
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      resetStates()
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [isError, isSuccess])
+
   return (
     <section className='pages' id='contact'>
       <h1>Contact</h1>
