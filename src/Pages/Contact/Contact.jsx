@@ -31,38 +31,42 @@ const Contact = () => {
 
     emailjs.sendForm(service_id, template_id, form.current, public_key).then(
       (result) => {
-        setIsSuccess(true);
-        setSuccess(result.text);
-        form.current.reset()
+        if (result) {
+          setIsSuccess(true);
+          setSuccess('Message sent, thank you for reaching out!' );
+          form.current.reset();
+        }
       },
       (error) => {
-        setIsError(true);
-        setError(error.text);
+        if (error) {
+          setIsError(true);
+          setError('Oops, something went wrong.');
+        }
       }
     );
   };
 
   const resetStates = () => {
-    setError(null)
-    setIsError(false)
-    setSuccess(null)
-    setIsSuccess(false)
-  }
+    setError(null);
+    setIsError(false);
+    setSuccess(null);
+    setIsSuccess(false);
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      resetStates()
-    }, 3000)
+      resetStates();
+    }, 3000);
 
-    return () => clearTimeout(timer)
-  }, [isError, isSuccess])
+    return () => clearTimeout(timer);
+  }, [isError, isSuccess]);
 
   return (
     <section className='pages' id='contact'>
       <h1>Contact</h1>
       <p>
         I'm always interested in hearing about new projects, so if you'd like to
-        have a chat, please don't hesitate to get in touch.
+        have a chat, please don't hesitate to get in touch. Shoot me a message, or reach out to me on my socials.
       </p>
       <div className='contact-form'>
         {isSuccess && <p className='form-feedback'>{success}</p>}
