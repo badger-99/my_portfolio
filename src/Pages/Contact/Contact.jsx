@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { FaGithub, FaLinkedinIn, FaXTwitter, FaMedium } from 'react-icons/fa6';
 import './contact.scss';
 
 const Contact = () => {
@@ -33,7 +34,7 @@ const Contact = () => {
       (result) => {
         if (result) {
           setIsSuccess(true);
-          setSuccess('Message sent, thank you for reaching out!' );
+          setSuccess('Message sent, thank you for reaching out!');
           form.current.reset();
         }
       },
@@ -53,30 +54,82 @@ const Contact = () => {
     setIsSuccess(false);
   };
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     resetStates();
-  //   }, 3000);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      resetStates();
+    }, 3000);
 
-  //   return () => clearTimeout(timer);
-  // }, [isError, isSuccess]);
+    return () => clearTimeout(timer);
+  }, [isError, isSuccess]);
 
   return (
     <section className='pages' id='contact'>
       <h1>Contact Me</h1>
       <p>
         I'm always interested in hearing about new projects, so if you'd like to
-        have a chat, please don't hesitate to get in touch. Shoot me a message, or reach out to me on my socials.
+        have a chat, please don't hesitate to get in touch. Shoot me a message,
+        or reach out to me on my socials.
       </p>
       <div className='contact-form'>
-        {isSuccess && <p className='form-feedback' id='success'>{success}</p>}
-        {isError && <p className='form-feedback' id='error'>{error}</p>}
+        {isSuccess && (
+          <p className='form-feedback' id='success'>
+            {success}
+          </p>
+        )}
+        {isError && (
+          <p className='form-feedback' id='error'>
+            {error}
+          </p>
+        )}
         <form ref={form} onSubmit={sendForm}>
-          <input type='text' name='name' placeholder='Name' required />
-          <input type='email' name='email' placeholder='Email' required />
-          <textarea name='message' placeholder='Message' required></textarea>
-          <input type='submit' value='SEND' />
+          <input
+            type='text'
+            name='name'
+            placeholder='Name'
+            id='name'
+            required
+          />
+          <input
+            type='email'
+            name='email'
+            placeholder='Email'
+            id='email'
+            required
+          />
+          <textarea
+            name='message'
+            placeholder='Message'
+            id='message'
+            required
+          ></textarea>
+          <input type='submit' value='SEND' id='send' />
         </form>
+      </div>
+
+      <div id='social-links'>
+        <a
+          target='_blank'
+          rel='noreferer'
+          href='https://linkedin.com/in/alfredmkg'
+        >
+          <FaLinkedinIn />
+        </a>
+
+        <a target='_blank' rel='noreferer' href='https://github.com/badger-99'>
+          <FaGithub />
+        </a>
+
+        <a target='_blank' rel='noreferer' href='https://twitter.com/AlfredMkg'>
+          <FaXTwitter />
+        </a>
+
+        <a
+          target='_blank'
+          rel='noreferer'
+          href='https://medium.com/@alfred.mkg'
+        >
+          <FaMedium />
+        </a>
       </div>
     </section>
   );
