@@ -53,24 +53,24 @@ const Contact = () => {
     setIsSuccess(false);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      resetStates();
-    }, 3000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     resetStates();
+  //   }, 3000);
 
-    return () => clearTimeout(timer);
-  }, [isError, isSuccess]);
+  //   return () => clearTimeout(timer);
+  // }, [isError, isSuccess]);
 
   return (
     <section className='pages' id='contact'>
-      <h1>Contact</h1>
+      <h1>Contact Me</h1>
       <p>
         I'm always interested in hearing about new projects, so if you'd like to
         have a chat, please don't hesitate to get in touch. Shoot me a message, or reach out to me on my socials.
       </p>
       <div className='contact-form'>
-        {isSuccess && <p className='form-feedback'>{success}</p>}
-        {isError && <p className='form-feedback'>{error}</p>}
+        {isSuccess && <p className='form-feedback' id='success'>{success}</p>}
+        {isError && <p className='form-feedback' id='error'>{error}</p>}
         <form ref={form} onSubmit={sendForm}>
           <input type='text' name='name' placeholder='Name' required />
           <input type='email' name='email' placeholder='Email' required />

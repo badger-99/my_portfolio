@@ -8,10 +8,20 @@
   .contact-form{
     position: relative;
     padding-top: 1rem;
+
     .form-feedback{
       margin: 0;
       position: absolute;
     }
+
+    #success{
+        color: rgb(2, 218, 2);
+      }
+
+    #error{
+        color: red;
+      }
+
     form{
       display: flex;
       flex-direction: column;
