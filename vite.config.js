@@ -14,7 +14,7 @@ export default defineConfig(({ command }) => {
   // instead of http://localhost:5173/my_portfolio/
 
   if (command !== 'serve') {
-    config.base = '/my_portfolio/';
+    config.base = '/my_portfolio';
   }
 
   return config;
