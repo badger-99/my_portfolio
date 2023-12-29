@@ -17,7 +17,7 @@ const Navbar = () => {
       <nav id='navigation'>
         <div id={showNav ? 'menu-logo' : 'logo'}>
           <Link to='/'>
-            <img src='src/assets/Logo/w-LogoHeader1.png' alt='logo' />
+            <img src='src/assets/logo/w-LogoHeader1.png' alt='logo' />
           </Link>
         </div>
 
@@ -45,6 +45,14 @@ const Navbar = () => {
               onClick={() => setShowNav(false)}
             >
               About
+            </NavLink>
+
+            <NavLink
+              to='resume'
+              className='navlink'
+              onClick={() => setShowNav(false)}
+            >
+              Resume
             </NavLink>
 
             <NavLink
