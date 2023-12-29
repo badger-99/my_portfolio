@@ -10,7 +10,7 @@ import './app.scss';
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter basename={import.meta.env.DEV ? '/' : '/my_portfolio'}>
       <Navbar />
       <Routes>
         <Route path='/' element={<Layout />}>
@@ -21,7 +21,7 @@ const App = () => {
           <Route path='contact' element={<Contact />} />
         </Route>
       </Routes>
-    </>
+    </BrowserRouter>
   );
 };
 export default App;
