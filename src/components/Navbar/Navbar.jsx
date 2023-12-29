@@ -16,10 +16,9 @@ const Navbar = () => {
     <>
       <nav id='navigation'>
         <div id={showNav ? 'menu-logo' : 'logo'}>
-          <h1>
-            <Link to='/'>{'<A/>'}</Link>
-          </h1>
-          <p>Alfred</p>
+          <Link to='/'>
+            <img src='src/assets/Logo/w-LogoHeader1.png' alt='logo' />
+          </Link>
         </div>
 
         <div id='hamburger-menu'>

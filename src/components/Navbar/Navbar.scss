@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0.5rem;
   color: white;
   background: black;
   position: fixed;
@@ -14,29 +13,24 @@
   box-shadow: inset;
 
   #logo {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.1rem;
-    padding-left: 0.5rem;
+    padding: 1.2rem 1rem 1rem;
 
-    // p {
-    //   margin-left: 0.25rem;
-    // }
+    img {
+      width: 4rem;
+    }
   }
 
   #menu-logo {
     position: fixed;
     left: 0;
     top: 0;
-    padding: 0.5rem 1rem 1rem;
+    padding: 1.2rem 1rem 1rem;
     color: white;
     z-index: 1;
     font-size: 1.1rem;
 
-    p {
-      margin-left: 0.33rem;
+    img {
+      width: 4rem;
     }
   }
 
