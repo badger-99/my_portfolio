@@ -1,0 +1,70 @@
+@import '../../_colors.scss';
+
+#contact {
+  p {
+    margin-top: 1rem;
+  }
+
+  .contact-form {
+    position: relative;
+    padding-top: 1rem;
+
+    .form-feedback {
+      margin: 0;
+      position: absolute;
+    }
+
+    #success {
+      color: rgb(2, 218, 2);
+    }
+
+    #error {
+      color: red;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      align-items: center;
+      margin-top: 1.5rem;
+
+      #name,
+      #email,
+      #message {
+        padding: 0.5rem;
+        border: none;
+        width: 100%;
+      }
+
+      #message {
+        height: 9rem;
+      }
+
+      #send{
+        width: 5rem;
+        padding: 0.5rem;
+        color: #fff;
+        border-color: #154ce4;
+        border-radius: 5px;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        background: none;
+        font-family: 'Proxima-Nova-Bold', sans-serif;
+      }
+    }
+
+  }
+  #social-links {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+
+    a {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+}
