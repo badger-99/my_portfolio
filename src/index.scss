@@ -29,8 +29,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body{
   background: black;
+  font-family: 'Proxima-Nova-Light', sans-serif;
+  color: whitesmoke;
+
+  h1{
+    font-family: 'Proxima-Nova-Bold', sans-serif;
+  }
 }
 
 #root {
