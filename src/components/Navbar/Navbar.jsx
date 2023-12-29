@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {
   FaBars,
@@ -12,6 +12,19 @@ import './navbar.scss';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const [mobile, setMobile] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth<768);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
       <nav id='navigation'>
@@ -25,7 +38,10 @@ const Navbar = () => {
           <FaBars onClick={() => setShowNav(true)} />
         </div>
 
-        <div id='navigation-menu' className={showNav ? 'visible' : 'invisible'}>
+        <div
+          id='navigation-menu'
+          className={`${mobile ? (showNav ? 'visible' : 'invisible') : 'visible'}`}
+        >
           <div id='close-menu'>
             <FaX onClick={() => setShowNav(false)} />
           </div>
