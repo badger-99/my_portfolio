@@ -15,7 +15,7 @@ export default defineConfig(({ command }) => {
   };
 
   if (command !== 'serve') {
-    config.base = '/my_portfolio';
+    config.base = '/my_portfolio/';
   }
 
   return config;
