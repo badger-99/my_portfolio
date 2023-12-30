@@ -41,7 +41,9 @@ const Navbar = () => {
 
         <div
           id='navigation-menu'
-          className={`${mobile ? (showNav ? 'visible' : 'invisible') : 'visible'}`}
+          className={`${
+            mobile ? (showNav ? 'visible' : 'invisible') : 'visible'
+          }`}
         >
           <div id='close-menu'>
             <FaX onClick={() => setShowNav(false)} />
@@ -69,7 +71,7 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              Resume
+              Résumé
             </NavLink>
 
             <NavLink

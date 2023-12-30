@@ -27,16 +27,15 @@ const Resume = () => {
 
   return (
     <section className='pages' id='resume'>
-      <h1>Resume</h1>
+      <h1>Résumé</h1>
       <a href={resume} download>
-        Download Resume
+        Download Résumé
       </a>
-      <Document
-        className='pdfResume'
-        file={resume}
-        externalLinkTarget='_blank'
-      >
-        <Page pageNumber={1} scale={width > 767 ? 1 : width > 499? 0.75: 0.5} />
+      <Document className='pdfResume' file={resume} externalLinkTarget='_blank'>
+        <Page
+          pageNumber={1}
+          scale={width > 767 ? 1 : width > 499 ? 0.75 : 0.5}
+        />
       </Document>
     </section>
   );
