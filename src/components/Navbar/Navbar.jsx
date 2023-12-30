@@ -8,6 +8,7 @@ import {
   FaXTwitter,
   FaMedium,
 } from 'react-icons/fa6';
+import logo from 'src/assets/logo/w-LogoHeader1.png';
 import './navbar.scss';
 
 const Navbar = () => {
@@ -30,7 +31,7 @@ const Navbar = () => {
       <nav id='navigation'>
         <div id={showNav ? 'menu-logo' : 'logo'}>
           <Link to='/'>
-            <img src='src/assets/logo/w-LogoHeader1.png' alt='logo' />
+            <img src={logo} alt='logo' />
           </Link>
         </div>
 
