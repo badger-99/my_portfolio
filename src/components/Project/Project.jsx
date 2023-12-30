@@ -5,7 +5,7 @@ import './project.scss'
 const Project = (project) => {
   const { Cover, Title, Stack, Description, Demo, Code } = project;
   const popData = { Stack, Demo, Code };
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1220);
   const [showPopUp, setShowPopUp] = useState(false);
 
   const handleResize = () => {
@@ -35,7 +35,11 @@ const Project = (project) => {
   return (
     <div className='project-box'>
       <div className='project' onClick={openPopUp}>
-        <img src={Cover} alt={Title} className='screenshot' />
+        <img
+          src={`${import.meta.env.BASE_URL}${Cover}`}
+          alt={Title}
+          className='screenshot'
+        />
         <div className='project-details'>
           <h4 className='title'>{Title}</h4>
           <p className='description'>{Description}</p>

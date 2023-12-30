@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {
   FaBars,
@@ -8,16 +8,30 @@ import {
   FaXTwitter,
   FaMedium,
 } from 'react-icons/fa6';
+import logo from '../../assets/logo/w-LogoHeader1.png';
 import './navbar.scss';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const [mobile, setMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth<768);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
       <nav id='navigation'>
         <div id={showNav ? 'menu-logo' : 'logo'}>
           <Link to='/'>
-            <img src='src/assets/logo/w-LogoHeader1.png' alt='logo' />
+            <img src={logo} alt='logo' />
           </Link>
         </div>
 
@@ -25,7 +39,12 @@ const Navbar = () => {
           <FaBars onClick={() => setShowNav(true)} />
         </div>
 
-        <div id='navigation-menu' className={showNav ? 'visible' : 'invisible'}>
+        <div
+          id='navigation-menu'
+          className={`${
+            mobile ? (showNav ? 'visible' : 'invisible') : 'visible'
+          }`}
+        >
           <div id='close-menu'>
             <FaX onClick={() => setShowNav(false)} />
           </div>
@@ -52,7 +71,7 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              Resume
+              Résumé
             </NavLink>
 
             <NavLink

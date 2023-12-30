@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { Document, Page } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
-import './resume.scss';
 import { pdfjs } from 'react-pdf';
+import resume from '../../assets/resume/Resume(needs updating).pdf';
+import './resume.scss';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.js',
@@ -12,6 +13,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 const Resume = () => {
   const [width, setWidth] = useState(window.innerWidth);
+  const errorMsg = 'Failed to load the PDF, please download it instead.'
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,16 +28,20 @@ const Resume = () => {
 
   return (
     <section className='pages' id='resume'>
-      <h1>Resume</h1>
-      <a href='Resume(needs updating).pdf' download>
-        Download Resume
+      <h1>Résumé</h1>
+      <a href={resume} download>
+        Download Résumé
       </a>
       <Document
         className='pdfResume'
-        file={'Resume(needs updating).pdf'}
+        file={resume}
         externalLinkTarget='_blank'
+        error={errorMsg}
       >
-        <Page pageNumber={1} scale={width > 767 ? 1 : width > 499? 0.75: 0.5} />
+        <Page
+          pageNumber={1}
+          scale={width > 767 ? 1 : width > 499 ? 0.75 : 0.5}
+        />
       </Document>
     </section>
   );
