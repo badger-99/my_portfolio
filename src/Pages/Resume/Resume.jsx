@@ -7,7 +7,7 @@ import resume from '../../assets/resume/Resume(needs updating).pdf';
 import './resume.scss';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.js',
+  'pdfjs-dist/legacy/build/pdf.worker.min.js',
   import.meta.url
 ).toString();
 
