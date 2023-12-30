@@ -2,15 +2,6 @@
 {
   "portfolio": [
     {
-      "Cover": "portfolio_images/MoneyMate.PNG",
-      "Title": "MoneyMate",
-      "Stack": "Ruby, Rails, ERB, SCSS",
-      "Description": "An app to help you keep track of your spending.",
-      "Demo": "https://money-mate-18oh.onrender.com/welcome",
-      "Code": "https://github.com/badger-99/money_mate",
-      "id": 1
-    },
-    {
       "Cover": "portfolio_images/CryptoMarketRankings.PNG",
       "Title": "Crypto Market Rankings",
       "Stack": "React, React Router, Redux, CSS",
