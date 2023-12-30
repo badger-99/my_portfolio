@@ -13,6 +13,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 const Resume = () => {
   const [width, setWidth] = useState(window.innerWidth);
+  const errorMsg = 'Failed to load the PDF, please download it instead.'
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,7 +32,12 @@ const Resume = () => {
       <a href={resume} download>
         Download Résumé
       </a>
-      <Document className='pdfResume' file={resume} externalLinkTarget='_blank'>
+      <Document
+        className='pdfResume'
+        file={resume}
+        externalLinkTarget='_blank'
+        error={errorMsg}
+      >
         <Page
           pageNumber={1}
           scale={width > 767 ? 1 : width > 499 ? 0.75 : 0.5}
