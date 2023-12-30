@@ -11,6 +11,7 @@ export default defineConfig(({ command }) => {
   const config = {
     base: '/',
     plugins: [react()],
+    build: { chunkSizeWarningLimit: 1600 },
   };
 
   if (command !== 'serve') {
