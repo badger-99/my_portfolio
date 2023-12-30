@@ -13,7 +13,7 @@ import './navbar.scss';
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
-  const [mobile, setMobile] = useState(window.innerWidth);
+  const [mobile, setMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const handleResize = () => {
