@@ -5,7 +5,7 @@ import './project.scss'
 const Project = (project) => {
   const { Cover, Title, Stack, Description, Demo, Code } = project;
   const popData = { Stack, Demo, Code };
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1220);
   const [showPopUp, setShowPopUp] = useState(false);
 
   const handleResize = () => {
