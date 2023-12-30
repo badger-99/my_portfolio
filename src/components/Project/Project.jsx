@@ -35,7 +35,11 @@ const Project = (project) => {
   return (
     <div className='project-box'>
       <div className='project' onClick={openPopUp}>
-        <img src={Cover} alt={Title} className='screenshot' />
+        <img
+          src={`${import.meta.env.BASE_URL}${Cover}`}
+          alt={Title}
+          className='screenshot'
+        />
         <div className='project-details'>
           <h4 className='title'>{Title}</h4>
           <p className='description'>{Description}</p>

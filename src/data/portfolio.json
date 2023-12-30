@@ -2,7 +2,7 @@
 {
   "portfolio": [
     {
-      "Cover": "/portfolio_images/MoneyMate.PNG",
+      "Cover": "portfolio_images/MoneyMate.PNG",
       "Title": "MoneyMate",
       "Stack": "Ruby, Rails, ERB, SCSS",
       "Description": "An app to help you keep track of your spending.",
@@ -11,7 +11,7 @@
       "id": 1
     },
     {
-      "Cover": "/portfolio_images/CryptoMarketRankings.PNG",
+      "Cover": "portfolio_images/CryptoMarketRankings.PNG",
       "Title": "Crypto Market Rankings",
       "Stack": "React, React Router, Redux, CSS",
       "Description": "Get key market stats on the current top100 cryptocurrencies.",
@@ -21,7 +21,7 @@
     },
 
     {
-      "Cover": "/portfolio_images/SpaceTravellersHub.PNG",
+      "Cover": "portfolio_images/SpaceTravellersHub.PNG",
       "Title": "Space Travellers Hub",
       "Stack": "React, React Router, Redux, CSS",
       "Description": "Sign up for missions in Space, and reserve a rocket of your choosing.",
@@ -31,7 +31,7 @@
     },
 
     {
-      "Cover": "/portfolio_images/MathMagicians.PNG",
+      "Cover": "portfolio_images/MathMagicians.PNG",
       "Title": "Math Magicians",
       "Stack": "React, CSS",
       "Description": "Do math and read quotes.",
@@ -41,7 +41,7 @@
     },
 
     {
-      "Cover": "/portfolio_images/AwesomeBooks.PNG",
+      "Cover": "portfolio_images/AwesomeBooks.PNG",
       "Title": "Awesome Books",
       "Stack": "JavaScript, HTML, CSS",
       "Description": "Keep track of books you like or want to read.",
@@ -51,7 +51,7 @@
     },
 
     {
-      "Cover": "/portfolio_images/To-Do_List.PNG",
+      "Cover": "portfolio_images/To-Do_List.PNG",
       "Title": "To-do List",
       "Stack": "JavaScript, HTML, CSS",
       "Description": "Boost your productivity by keeping track of your daily tasks.",
@@ -61,7 +61,7 @@
     },
 
     {
-      "Cover": "/portfolio_images/Leaderboard.PNG",
+      "Cover": "portfolio_images/Leaderboard.PNG",
       "Title": "Leaderboard",
       "Stack": "JavaScript, HTML, CSS",
       "Description": "Keep track of scores and take your game nights to the next level!",
