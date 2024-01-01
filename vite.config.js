@@ -14,9 +14,5 @@ export default defineConfig(({ command }) => {
     build: { chunkSizeWarningLimit: 1600 },
   };
 
-  if (command !== 'serve') {
-    config.base = '/my_portfolio/';
-  }
-
   return config;
 });
