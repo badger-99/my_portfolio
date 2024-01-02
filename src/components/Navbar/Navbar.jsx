@@ -71,7 +71,7 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              Résumé
+              Resumé
             </NavLink>
 
             <NavLink
