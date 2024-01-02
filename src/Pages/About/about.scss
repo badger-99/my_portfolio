@@ -1,1 +1,22 @@
 @import '../../_colors.scss';
+
+#about{
+  #header{
+    position: relative;
+    margin-bottom: 2rem;
+
+    h1{
+      color: $blue;
+      font-size: 1.2rem;
+    }
+    
+    #link{
+      position: absolute;
+      top: 0.5rem;
+      right: 0;
+      text-decoration: none;
+      border: 2px solid $blue;
+      padding: 0.2rem;
+    }
+  }
+}

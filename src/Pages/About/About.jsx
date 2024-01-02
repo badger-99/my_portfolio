@@ -1,32 +1,24 @@
 import { Link } from 'react-router-dom';
+import './about.scss'
 
 const About = () => {
   return (
     <section className='pages' id='about'>
+      <div id="header">
       <h1>About Me</h1>
-      <br />
-      <Link to='/resume'>My Resumé</Link>
-      <br />
-      <br />
+      <Link to='/resume' id='link'>My Resumé</Link>
+      </div>
+
       <p>
-        Hello there! My name is Alfred, but you can call me Al. I'm a full stack
-        developer, and I especially enjoy engineering front and back-end
-        components that integrate seamlessly.
+        Hello there! My name is Alfred, but you can call me Al. When I'm not
+        dealing with code or reading, you'll most likely find me either trying
+        or modifying a recipe, volunteering somewhere, enjoying a
+        sci-fi show or film, or looking for a good rush that doesn't
+        involve bugs and a hard deadline.
       </p>
       <br />
-      <p>
-        I have a strong sence of curiosity and I find a perticular satisfaction
-        in learning new things and putting them to use, or finding ways to
-        improve old things whenever possible, and it's not limited to coding.
-      </p>
+      <p>Most of these activities will be conducted with background music and/or coffee.</p>
       <br />
-      <p>
-        I listen to a lot of music, sometimes even when I'm coding. However,
-        when I'm away from my computer, you'll most likely find me either trying
-        a new recipe or modifying an old one, working out, volunteering
-        somewhere, or looking for a good adrenaline rush that doesn't involve
-        bugs and hard deadlines.
-      </p>
     </section>
   );
 };
