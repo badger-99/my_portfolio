@@ -3,7 +3,7 @@ import { Document, Page } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import { pdfjs } from 'react-pdf';
-import resume from '../../assets/resume/Resume(needs updating).pdf';
+import resume from "../../assets/resume/Alfred's Resumé.pdf";
 import './resume.scss';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -28,9 +28,9 @@ const Resume = () => {
 
   return (
     <section className='pages' id='resume'>
-      <h1>Résumé</h1>
+      <h1>Resumé</h1>
       <a href={resume} download>
-        Download Résumé
+        Download Resumé
       </a>
       <Document
         className='pdfResume'

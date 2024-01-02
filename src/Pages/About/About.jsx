@@ -5,7 +5,7 @@ const About = () => {
     <section className='pages' id='about'>
       <h1>About Me</h1>
       <br />
-      <Link to='/resume'>My Résumé</Link>
+      <Link to='/resume'>My Resumé</Link>
       <br />
       <br />
       <p>
