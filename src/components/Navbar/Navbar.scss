@@ -71,7 +71,9 @@
     margin-top: 5rem;
 
     .navlink {
+      font-weight: bold;
       color: $white;
+      text-decoration: none;
 
       &.active {
         color: $blue;
