@@ -1,3 +1,5 @@
+@import '_colors.scss';
+
 @font-face {
   font-family: 'Proxima-Nova-Bold';
   src: url('./assets/fonts/ProximaNova-Bold.woff') format('woff'),
@@ -30,7 +32,7 @@
 body {
   background: black;
   font-family: 'Proxima-Nova-Light', sans-serif;
-  color: whitesmoke;
+  color: $white;
 
   #root {
     position: relative;
@@ -41,7 +43,7 @@ body {
 
     a {
       text-decoration: none;
-      color: #154ce4;
+      color: $blue;
     }
 
     .invisible {

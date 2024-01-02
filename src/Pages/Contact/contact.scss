@@ -15,11 +15,11 @@
     }
 
     #success {
-      color: rgb(2, 218, 2);
+      color: $good;
     }
 
     #error {
-      color: red;
+      color: $bad;
     }
 
     form {
@@ -44,8 +44,8 @@
       #send{
         width: 5rem;
         padding: 0.5rem;
-        color: #fff;
-        border-color: #154ce4;
+        color: $white;
+        border-color: $button-border;
         border-radius: 5px;
         margin-top: 0.5rem;
         font-size: 1rem;
@@ -63,7 +63,7 @@
     justify-content: center;
 
     a {
-      color: white;
+      color: $white;
       font-size: 1.5rem;
     }
   }
