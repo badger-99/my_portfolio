@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './about.scss'
+import Cube from '../../components/cube/Cube';
 
 const About = () => {
   return (
@@ -28,6 +29,9 @@ const About = () => {
         bugs and a hard deadline.
       </p>
       <br />
+      <div>
+        <Cube />
+      </div>
     </section>
   );
 };
