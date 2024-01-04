@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './about.scss'
 import Cube from '../../components/cube/Cube';
+import Particles from '../../components/Particles/Particles';
 
 const About = () => {
   return (
@@ -29,6 +30,7 @@ const About = () => {
       </div>
       <div id='cube-section'>
         <Cube />
+        <Particles />
       </div>
     </section>
   );
