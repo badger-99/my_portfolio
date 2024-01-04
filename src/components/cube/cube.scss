@@ -15,11 +15,13 @@
     height: 120px; // increase by 80px for larger screens
     border: 1px solid #ccc;
     background: rgba(255, 255, 255, 0.4);
+    // background: rgba(253, 253, 253, 0.479);
     font-size: 100px; // increase by 80px for larger screens
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px 0 lightyellow;
+    // box-shadow: 0 0 50px 10px lightblue inset, 0 0 20px 0 $blue ;
   }
 
   // increase translateZ by 40px for larger screens
