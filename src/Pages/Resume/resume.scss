@@ -1,5 +1,36 @@
-.pdfResume{
+@import '../../_colors.scss';
+
+#resume {
   display: flex;
-  justify-content: center;
-  width: fit-content;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+      color: $blue;
+      font-size: 3rem;
+      align-self: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    #dl-link{
+      align-self: flex-end;
+      text-decoration: none;
+      margin-bottom: 3rem;
+      text-transform: capitalize;
+      font-family: 'Proxima-Nova-Bold', sans-serif;
+      letter-spacing: 0.05rem;
+      border: 2px solid $blue;
+      border-radius: 5px;
+      padding: 0.5rem;
+      background: $black;
+      box-shadow: 0 0 10px $blue, 0 0 20px $blue      ;
+      -webkit-box-reflect: below 7px linear-gradient(transparent, #0005);
+      // animation: pulse 5s ease-in-out infinite;
+    }
+
+  .pdfResume {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+  }
 }

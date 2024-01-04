@@ -29,8 +29,8 @@ const Resume = () => {
   return (
     <section className='pages' id='resume'>
       <h1>Resumé</h1>
-      <a href={resume} download>
-        Download Resumé
+      <a href={resume} id='dl-link' download>
+        Download
       </a>
       <Document
         className='pdfResume'
