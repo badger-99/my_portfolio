@@ -16,14 +16,14 @@ const About = () => {
           playing in the background.
         </p>
         <p>
-          Among my positive qualities, my curiosity ranks high. It's the reason
-          I can't walk away from something new without learning it or attempting
-          to do it, and it's the reason I took an interest in programming.
+          My curiosity ia among my stronger positive qualities. It's the reason
+          I rarely walk away from something new without learning (about) it or attempting
+          to do it, and it's the reason I got into programming.
         </p>
         <p>
           When I'm not dealing with code or reading, you'll most likely find me
           either trying or modifying a recipe, volunteering somewhere, enjoying
-          a sci-fi show or film, or looking for a good rush that doesn't involve
+          a sci-fi film or show, or looking for a good rush that doesn't involve
           bugs and a hard deadline.
         </p>
         <Link to='/resume' id='link'>
