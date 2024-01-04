@@ -50,20 +50,20 @@ const snow: ISourceOptions = {
     size: {
       value: { min: 1, max: 5 },
     },
-    wobble: {
-      enable: true,
-      // distance: 10,
-      // speed: 10,
-    },
-    zIndex: {
-      value: {
-        min: 0,
-        max: 100,
-      },
-      // opacityRate: 1,
-      // sizeRate: 1,
-      // velocityRate: 1,
-    },
+    // wobble: {
+    //   enable: true,
+    //   // distance: 10,
+    //   // speed: 10,
+    // },
+    // zIndex: {
+    //   value: {
+    //     min: 0,
+    //     max: 100,
+    //   },
+    //   // opacityRate: 1,
+    //   // sizeRate: 1,
+    //   // velocityRate: 1,
+    // },
   },
 };
 export default snow;

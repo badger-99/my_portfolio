@@ -23,7 +23,7 @@ const ParticlesComponent = () => {
   if (init) {
     return (
       <Particles
-        id='tsparticles'
+        id='snow'
         particlesLoaded={particlesLoaded}
         options={options}
       />
