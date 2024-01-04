@@ -2,7 +2,7 @@ import './cube.scss'
 
 const Cube = () => {
   return (
-    <div className='stage-cube-cont'>
+    <div>
       <div className='cube-spinner'>
         <div className='face1'>
           <i class='devicon-javascript-plain colored'></i>
