@@ -80,7 +80,7 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              Portfolio
+              Projects
             </NavLink>
 
             <NavLink
