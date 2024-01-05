@@ -1,6 +1,10 @@
 @import '../../_colors.scss';
 .project-box {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   .project {
     .screenshot {
@@ -8,6 +12,11 @@
       width: 100%;
       max-width: 20rem;
       height: 12.5rem;
+    }
+
+    .project-details{
+      max-width: 20rem;
+      text-align: center;
     }
   }
 
@@ -19,6 +28,7 @@
     left: 0;
     height: 12.5rem;
     width: 100%;
+    max-width: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
