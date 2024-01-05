@@ -87,6 +87,7 @@ const Contact = () => {
             name='name'
             placeholder='Name'
             id='name'
+            className='cool-border'
             required
           />
           <input
@@ -94,12 +95,14 @@ const Contact = () => {
             name='email'
             placeholder='Email'
             id='email'
+            className='cool-border'
             required
           />
           <textarea
             name='message'
             placeholder='Message'
             id='message'
+            className='cool-border'
             required
           ></textarea>
           <input type='submit' value='SEND' id='send' />

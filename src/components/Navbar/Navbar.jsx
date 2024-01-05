@@ -33,6 +33,7 @@ const Navbar = () => {
           <Link to='/'>
             <img src={logo} alt='logo' />
           </Link>
+          <p>A/FRED</p>
         </div>
 
         <div id='hamburger-menu'>
@@ -71,7 +72,7 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              Résumé
+              Resumé
             </NavLink>
 
             <NavLink

@@ -1,1 +1,30 @@
 @import '../../_colors.scss';
+
+#home {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  #my_picture {
+    align-self: center;
+    width: 16rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  #intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 3rem;
+      color: $blue;
+    }
+    h2 {
+      font-family: 'Proxima-Nova-Bold', sans-serif;
+    }
+  }
+}
