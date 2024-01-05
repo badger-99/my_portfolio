@@ -10,7 +10,7 @@ const Project = (project) => {
   const projectRef = useRef(id)
 
   const handleResize = () => {
-    setIsMobile(window.innerWidth < 768);
+    setIsMobile(window.innerWidth < 1220);
   };
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Project = (project) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (projectRef.current && !projectRef.current.contains(event.target)) {
-        setShowPopUp(false);
+        closePopUp();
       }
     };
 
@@ -43,7 +43,7 @@ const Project = (project) => {
   };
 
   const closePopUp = () => {
-    setShowPopUp(!showPopUp);
+    setShowPopUp(false);
   };
 
   return (
