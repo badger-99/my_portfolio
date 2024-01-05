@@ -8,7 +8,7 @@ import {
   FaXTwitter,
   FaMedium,
 } from 'react-icons/fa6';
-import logo from '../../assets/logos/w-LogoHeader1.png';
+import logo from '../../assets/logos/blue-LogoHeader1.png';
 import subLogo from '../../assets/logos/white_name_logo.png';
 import './navbar.scss';
 
