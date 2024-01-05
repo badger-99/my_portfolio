@@ -8,11 +8,11 @@ const PopUp = ({popData, close}) => {
 
       <div className='project-links'>
         <a className='project-code' href={Code} target='_blank'>
-          <FaGithub />
+          <FaGithub /> <p>Code</p>
         </a>
-        <a className='project-demo' href={Demo} target='_blank'>
-          <FaGlobe />
-        </a>
+        {Demo && <a className='project-demo' href={Demo} target='_blank'>
+          <FaGlobe /> <p>Demo</p>
+        </a>}
       </div>
 
       <p className='project-stack'><span>Built with:</span>{Stack}</p>

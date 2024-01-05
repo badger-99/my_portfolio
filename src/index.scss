@@ -43,9 +43,9 @@ body {
 
     a {
       color: inherit;
-      text-decoration: underline;
-      text-decoration-color: $blue;
-      text-decoration-thickness: 2px;
+      text-decoration: none;
+      // text-decoration-color: $blue;
+      // text-decoration-thickness: 2px;
     }
 
     .invisible {

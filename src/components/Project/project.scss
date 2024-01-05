@@ -22,23 +22,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    justify-content: flex-end;
+    gap: 1.3rem;
 
     .close-popup {
-      align-self: flex-end;
+      position: absolute;
+      top: 0;
+      right: 0;
       margin: 1rem;
     }
-  
+
     .project-links {
       display: flex;
       flex-direction: row;
-      gap: 2rem;
-      font-size: 2rem;
+      gap: 5rem;
+      font-size: 2.5rem;
+
+      .project-code,
+      .project-demo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p {
+          font-size: 1.2rem;
+          text-decoration: none;
+        }
+      }
     }
-  
+
     .project-stack {
-      margin-top: auto;
-      margin-bottom: 1.5rem;
+      // margin-top: auto;
+      margin-bottom: 1rem;
       display: inherit;
       flex-direction: column;
       align-items: center;
@@ -46,4 +61,3 @@
     }
   }
 }
-
