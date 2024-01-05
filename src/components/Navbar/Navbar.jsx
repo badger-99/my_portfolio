@@ -8,7 +8,8 @@ import {
   FaXTwitter,
   FaMedium,
 } from 'react-icons/fa6';
-import logo from '../../assets/logo/w-LogoHeader1.png';
+import logo from '../../assets/logos/w-LogoHeader1.png';
+import subLogo from '../../assets/logos/white_name_logo.png';
 import './navbar.scss';
 
 const Navbar = () => {
@@ -30,10 +31,10 @@ const Navbar = () => {
     <>
       <nav id='navigation'>
         <div id={showNav ? 'menu-logo' : 'logo'}>
-          <Link to='/'>
-            <img src={logo} alt='logo' />
+          <Link id='nav-logo' to='/'>
+            <img id='main-logo' src={logo} alt='logo' />
+            <img id='sub-logo' src={subLogo} alt='name' />
           </Link>
-          <p>A/FRED</p>
         </div>
 
         <div id='hamburger-menu'>
