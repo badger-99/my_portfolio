@@ -48,6 +48,8 @@ const Project = (project) => {
 
   return (
     <div className='project-box'>
+      <div className="glow"></div>
+      <div className="border"></div>
       <div className='project'>
         <img
           src={`${import.meta.env.BASE_URL}${Cover}`}
@@ -60,8 +62,8 @@ const Project = (project) => {
           <h4 className='title'>{Title}</h4>
           <p className='description'>{Description}</p>
         </div>
-      </div>
       {showPopUp && <PopUp popData={popData} close={closePopUp} />}
+      </div>
     </div>
   );
 };

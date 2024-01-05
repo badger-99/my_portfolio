@@ -1,0 +1,52 @@
+    @import '../../_colors.scss';
+    
+    .popup {
+      background: $popupBG;
+      color: $white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 12.5rem;
+      width: 100%;
+      max-width: 20rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1.3rem;
+
+      .close-popup {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
+      }
+
+      .project-links {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        font-size: 2.5rem;
+
+        .project-code,
+        .project-demo {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          p {
+            font-size: 1.2rem;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .project-stack {
+        // margin-top: auto;
+        margin-bottom: 1rem;
+        display: inherit;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }

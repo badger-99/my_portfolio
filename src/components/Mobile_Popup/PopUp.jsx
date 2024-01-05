@@ -1,4 +1,5 @@
 import { FaX, FaGithub, FaGlobe } from 'react-icons/fa6';
+import './popUp.scss'
 
 const PopUp = ({popData, close}) => {
   const { Stack, Code, Demo } = popData;
