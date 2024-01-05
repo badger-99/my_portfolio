@@ -16,7 +16,7 @@ const Portfolio = () => {
   
   return (
     <section className='pages' id='portfolio'>
-      <h1>This is my work</h1>
+      <h1>My Projects</h1>
         {renderPortfolio(portfolioData.portfolio)}
     </section>
   );
