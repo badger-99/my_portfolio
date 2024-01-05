@@ -66,9 +66,9 @@ const Contact = () => {
     <section className='pages' id='contact'>
       <h1>Contact Me</h1>
       <p>
-        I'm always interested in hearing about new projects, so if you'd like to
-        have a chat, please don't hesitate to get in touch. Shoot me a message,
-        or reach out to me on my socials.
+        I'm always interested in getting feedback or hearing about new projects, so if you'd like to
+        have a chat, please don't hesitate to get in touch. Send me a message,
+        or connect me on my socials.
       </p>
       <div className='contact-form'>
         {isSuccess && (
