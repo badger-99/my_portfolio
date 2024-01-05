@@ -1,18 +1,58 @@
 @import '../../_colors.scss';
 .project-box {
+  $border-width: 2px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 3px solid $blue;
-  padding: 0.5rem;
+  position: relative;
+  background: $black;
   border-radius: 10px;
-  box-shadow: 0 0 10px $blue, 0 0 10px $blue;
-  
+  // overflow: hidden;
+
+  // z-index: -2;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * $border-width);
+    left: calc(-1 * $border-width);
+    z-index: -1;
+    width: calc(100% + $border-width * 2);
+    height: calc(100% + $border-width * 2);
+    background: linear-gradient(60deg,
+    #0051ff,
+    #0051ff,
+    #0051ff,
+    #0084ff,
+    #0084ff,
+    #0084ff,
+    #0051ff,
+    #0051ff,
+    #0051ff
+      );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * $border-width);
+    filter: blur(6px);
+    animation: moveGradient 4s alternate infinite;
+  }
+
+  // border: 3px solid transparent;
+  // border-image: linear-gradient( #0051ff, #0011ff, #4300fc, 275deg);
+  // border-image-slice: 1;
+  // padding: 0.5rem;
+  // background-clip: padding-box;
+  // animation: gradientAnimation 3s linear infinite;
+
+  // box-shadow: 0 0 linear-gradient(#0051ff, #6500fc), 0 0 10px linear-gradient(#0051ff, #6500fc);
+
   .project {
-    overflow: hidden;
     position: relative;
-  
+    background: $black;
+    border-radius: 10px;
+    overflow: hidden;
+
     .screenshot {
       object-fit: cover;
       width: 100%;
@@ -24,7 +64,17 @@
       max-width: 20rem;
       text-align: center;
     }
-
-
   }
 }
+@keyframes moveGradient {
+  // 0% {
+  //   background-position: 0% 50%;
+  // }
+  50% {
+    background-position: 100% 50%;
+  }
+  // 100% {
+  //   background-position: 0% 50%;
+  // }
+}
+// background: linear-gradient(#0051ff, #6500fc);
