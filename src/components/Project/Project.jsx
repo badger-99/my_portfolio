@@ -1,26 +1,40 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import PopUp from '../Mobile_Popup/PopUp';
 import './project.scss'
 
 const Project = (project) => {
-  const { Cover, Title, Stack, Description, Demo, Code } = project;
+  const { Cover, Title, Stack, Description, Demo, Code, id } = project;
   const popData = { Stack, Demo, Code };
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1220);
   const [showPopUp, setShowPopUp] = useState(false);
+  const projectRef = useRef(id)
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
   };
 
   useEffect(() => {
-    // Add the event listener when the component mounts
     window.addEventListener('resize', handleResize);
-
-    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (projectRef.current && !projectRef.current.contains(event.target)) {
+        setShowPopUp(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [])
 
   const openPopUp = () => {
     if (isMobile) {
@@ -34,11 +48,13 @@ const Project = (project) => {
 
   return (
     <div className='project-box'>
-      <div className='project' onClick={openPopUp}>
+      <div className='project'>
         <img
           src={`${import.meta.env.BASE_URL}${Cover}`}
           alt={Title}
           className='screenshot'
+          onClick={openPopUp}
+          ref={projectRef}
         />
         <div className='project-details'>
           <h4 className='title'>{Title}</h4>
