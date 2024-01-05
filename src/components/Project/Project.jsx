@@ -22,7 +22,12 @@ const Project = (project) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (projectRef.current && !projectRef.current.contains(event.target)) {
+      const linkClick = event.target.closest('a');
+      if (
+        projectRef.current &&
+        !projectRef.current.contains(event.target) &&
+        !linkClick
+      ) {
         closePopUp();
       }
     };
