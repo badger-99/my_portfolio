@@ -13,6 +13,7 @@ const Project = (project) => {
     setIsMobile(window.innerWidth < 1220);
   };
 
+  // monitoring the screen width
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     return () => {
@@ -20,6 +21,7 @@ const Project = (project) => {
     };
   }, []);
 
+  // closing popups on blur
   useEffect(() => {
     const handleClickOutside = (event) => {
       const linkClick = event.target.closest('a');
@@ -51,21 +53,23 @@ const Project = (project) => {
 
   return (
     <div className='project-box'>
-        <div className='project'>
-          <img
-            src={`${import.meta.env.BASE_URL}${Cover}`}
-            alt={Title}
-            className='screenshot'
-            onClick={openPopUp}
-            ref={projectRef}
-          />
-          <div className='project-details'>
-            <h4 className='title'>{Title}</h4>
-            <p className='description'>{Description}</p>
-          </div>
-          {showPopUp && <PopUp popData={popData} close={closePopUp} />}
+      <div className='project'>
+        <img
+          src={`${import.meta.env.BASE_URL}${Cover}`}
+          alt={Title}
+          className='screenshot'
+          onClick={openPopUp}
+          ref={projectRef}
+        />
+        <div className='project-details'>
+          <h4 className='title'>{Title}</h4>
+          <p className='description'>{Description}</p>
+        </div>
+        <div className={showPopUp? 'seen' : 'unseen'}>
+          <PopUp popDat={popData} closePop={closePopUp} />
         </div>
       </div>
+    </div>
   );
 };
 export default Project;
