@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import './about.scss'
+import './about.scss';
 import Cube from '../../components/cube/Cube';
 import Particles from '../../components/Particles/Particles';
 
 const About = () => {
   return (
     <section className='pages' id='about'>
-      <div id='header'>
-        <h1>About Me</h1>
-      </div>
+        <div id='header'>
+          <h1>About Me</h1>
+        </div>
       <div id='text'>
         <p>
           I enjoy creating front and back-end components that integrate
@@ -17,8 +17,8 @@ const About = () => {
         </p>
         <p>
           My curiosity ia among my stronger positive qualities. It's the reason
-          I rarely walk away from something new without learning (about) it or attempting
-          to do it, and it's the reason I got into programming.
+          I rarely walk away from something new without learning (about) it or
+          attempting to do it, and it's the reason I got into programming.
         </p>
         <p>
           When I'm not dealing with code or reading, you'll most likely find me
@@ -30,10 +30,9 @@ const About = () => {
           resumé
         </Link>
       </div>
-      <div id='cube-section'>
-        <Cube />
-        <Particles />
-      </div>
+        <div id='cube-section'>
+          <Cube />
+        </div>
     </section>
   );
 };

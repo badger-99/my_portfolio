@@ -2,50 +2,82 @@
 
 #cube-container {
   position: absolute;
-  margin-top: 5rem;
-  .cube-spinner {
-    animation-name: spincube;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 12s;
+  // margin-top: 7rem;
+  border: 1px solid white;
+
+  #cube-spinner {
+    margin-top: 2rem;
+    animation: spincube infinite 12s ease-in-out;
     transform-style: preserve-3d;
     transform-origin: 60px 60px 0; // increase by 40px for larger screens
     margin-left: calc(50% - 60px); // increase by 40px for larger screens
+    z-index: 0;
 
-    div {
+    .faces {
       position: absolute;
       width: 120px; // increase by 80px for larger screens
       height: 120px; // increase by 80px for larger screens
-      border: 1px solid #ccc;
-      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid #fff;
+      background: rgb(0, 0, 0);
       // background: rgba(253, 253, 253, 0.479);
       font-size: 100px; // increase by 80px for larger screens
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 20px 0 white;
+      box-shadow: 0 0 50px 10px #0051ff inset, 0 0 70px 2px $white,
+        // 0 0 20px $white,
+        // 0 0 30px $blue,
+        // 0 0 40px $blue,
+        0 0 60px 6px $blue;
       // box-shadow: 0 0 50px 10px lightblue inset, 0 0 20px 0 $blue ;
     }
 
     // increase translateZ by 40px for larger screens
-    .face1 {
+    #face1 {
       transform: translateZ(60px);
     }
-    .face2 {
+    #face2 {
       transform: rotateY(90deg) translateZ(60px);
     }
-    .face3 {
+    #face3 {
       transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
     }
-    .face4 {
+    #face4 {
       transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
     }
-    .face5 {
+    #face5 {
       transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
     }
-    .face6 {
+    #face6 {
       transform: rotateX(-90deg) translateZ(60px);
     }
+  }
+
+  #shadow {
+    $shadow-color: #75a0ff;
+    position: absolute;
+    perspective: 20rem;
+    // perspective-origin: 77px 100px;
+    width: 200px; // increase by 80px for larger screens
+    height: 125px; // increase by 80px for larger screens
+    background: $shadow-color;
+    // z-index: -1;
+    bottom: -25rem;
+    right: -100px;
+    border-radius: 35%;
+    transform: rotateX(60deg);
+    // box-shadow: 0 0 20px 10px $shadow-color;
+    // transform: translateX(-6rem) translateY(7rem) rotateX(45deg) rotateY(0deg) rotateZ(0deg) ;
+    filter: blur(35px);
+  }
+
+  #snow {
+    top: 0;
+    right: -9rem;
+    width: 18rem;
+    height: 22rem;
+    position: absolute;
+    z-index: -1;
   }
 }
 
