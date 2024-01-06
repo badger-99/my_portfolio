@@ -17,7 +17,7 @@ const Home = () => {
         <div id='typing-svg'>
           <a href='https://git.io/typing-svg'>
             <img
-              src='https://readme-typing-svg.demolab.com?font=DM+Mono&weight=500&size=28&duration=4000&pause=1000&color=FFFFFF&center=true&random=false&width=375&lines=Front-end+Fixer;Back-end+Engineer;Full+Stack+Developer'
+              src='https://readme-typing-svg.demolab.com?font=DM+Mono&weight=500&size=28&duration=4000&pause=1000&color=FFFFFF&center=true&random=false&width=375&lines=Front-end+Fixer;Back-end+Builder;Full+Stack+Developer'
               alt='Typing SVG'
             />
           </a>
