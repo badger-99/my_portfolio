@@ -3,6 +3,7 @@
 #home {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 
   #my_picture {
@@ -15,16 +16,40 @@
     }
   }
 
-  #intro {
+  #hero-text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    h1 {
-      font-size: 3rem;
-      color: $blue;
+    gap: 2rem;
+
+    #intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h1 {
+        font-size: 3rem;
+        color: $blue;
+      }
     }
-    h2 {
+
+    #typing-svg {
       font-family: 'Proxima-Nova-Bold', sans-serif;
+    }
+
+    #links{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      .hero-link{
+        font-family: 'Proxima-Nova-Bold', sans-serif;
+        text-transform: capitalize;
+        border: 2px solid $blue;
+        border-radius: 5px;
+        padding: 0.5rem;
+        box-shadow: 0 0 10px $blue, 0 0 20px $blue;
+        -webkit-box-reflect: below 7px linear-gradient(transparent, #0005);
+      }
     }
   }
 }

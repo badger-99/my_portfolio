@@ -25,13 +25,13 @@ const snow: ISourceOptions = {
       straight: false,
     },
     number: {
-      value: 400,
+      value: 200,
       density: {
-        enable: true,
+        enable: false,
       },
     },
     opacity: {
-      value: { min: 0.2, max: 0.5 },
+      value: { min: 0.2, max: 1 },
     },
     rotate: {
       value: {
@@ -39,7 +39,7 @@ const snow: ISourceOptions = {
         max: 360,
       },
       animation: {
-        enable: true,
+        enable: false,
         speed: 5,
         sync: false,
       },
@@ -48,7 +48,7 @@ const snow: ISourceOptions = {
       type: 'circle',
     },
     size: {
-      value: { min: 1, max: 5 },
+      value: { min: 1, max: 2 },
     },
     // wobble: {
     //   enable: true,
