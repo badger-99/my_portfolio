@@ -78,18 +78,18 @@
     justify-content: space-between;
     gap: 3%;
     margin: 7.5% auto 0;
-    position: relative;
     max-width: 70rem;
-
+    
     #my_picture {
       width: 60%;
       max-width: 40rem;
       min-width: 14.6rem;
     }
-
+    
     #hero-text {
       align-items: flex-start;
       gap: 2rem;
+      position: relative;
       #intro {
         align-items: flex-start;
         h1 {
@@ -99,7 +99,8 @@
 
       #links {
         position: absolute;
-        bottom: -3rem;
+        gap: 1.25rem;
+        bottom: -10rem;
       }
     }
   }

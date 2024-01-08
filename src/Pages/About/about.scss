@@ -3,7 +3,7 @@
 #about {
   min-height: 100vh;
   max-width: 40rem;
-  margin: 0 auto;
+  margin: 0 auto 4rem;
   padding: 0 1rem;
 
   #header {
@@ -70,13 +70,14 @@
 
 @media screen and (min-width: 768px) {
   #about {
-    padding: 1rem 1.5rem 0;
+    padding: 2rem 1.5rem 0;
   }
 }
 
 @media screen and (min-width: 860px) {
   #about {
     max-width: 80rem;
+    margin-bottom: 10rem;
     #about-content {
       display: flex;
       flex-direction: row;
