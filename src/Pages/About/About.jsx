@@ -9,7 +9,7 @@ const About = () => {
       <div id='header'>
         <h1>About Me</h1>
       </div>
-      <div id='content'>
+      <div id='about-content'>
         <div id='text'>
           <p>
             I enjoy creating front and back-end components that integrate
