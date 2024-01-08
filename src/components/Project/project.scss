@@ -54,9 +54,28 @@
       text-align: center;
     }
   }
+
+  .seen{
+    visibility: visible;
+  }
+
+  .unseen{
+    visibility: hidden;
+  }
 }
 @keyframes moveGradient {
   50% {
     background-position: 100% 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project-box:hover{
+    .unseen{
+      visibility: visible;
+      .close-popup{
+        display: none;
+      }
+    }
   }
 }

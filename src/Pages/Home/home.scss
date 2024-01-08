@@ -5,10 +5,12 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding-top: 1rem;
 
   #my_picture {
-    align-self: center;
-    width: 16rem;
+    width: 75%;
+    max-width: 20rem;
+    min-width: 14.6rem;
 
     img {
       height: 100%;
@@ -27,21 +29,23 @@
       flex-direction: column;
       align-items: center;
       h1 {
-        font-size: 3rem;
+        font-size: min(max(14vw, 3.5rem), 4rem);
         color: $blue;
       }
     }
 
     #typing-svg {
-      font-family: 'Proxima-Nova-Bold', sans-serif;
+      a {
+        width: fit-content;
+      }
     }
 
-    #links{
+    #links {
       display: flex;
       flex-direction: row;
       gap: 1rem;
 
-      .hero-link{
+      .hero-link {
         font-family: 'Proxima-Nova-Bold', sans-serif;
         text-transform: capitalize;
         border: 2px solid $blue;
@@ -49,6 +53,54 @@
         padding: 0.5rem;
         box-shadow: 0 0 10px $blue, 0 0 20px $blue;
         -webkit-box-reflect: below 7px linear-gradient(transparent, #0005);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 467px) {
+  #home {
+    padding: 3rem 2rem 0;
+    #hero-text {
+      #intro {
+        h1 {
+          font-size: 3.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #home {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3%;
+    margin: 7.5% auto 0;
+    max-width: 70rem;
+    
+    #my_picture {
+      width: 60%;
+      max-width: 40rem;
+      min-width: 14.6rem;
+    }
+    
+    #hero-text {
+      align-items: flex-start;
+      gap: 2rem;
+      position: relative;
+      #intro {
+        align-items: flex-start;
+        h1 {
+          font-size: min(max(7vw, 3rem), 5.75rem);
+        }
+      }
+
+      #links {
+        position: absolute;
+        gap: 1.25rem;
+        bottom: -10rem;
       }
     }
   }

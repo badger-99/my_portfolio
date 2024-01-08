@@ -65,48 +65,52 @@ const Contact = () => {
   return (
     <section className='pages' id='contact'>
       <h1>Contact Me</h1>
-      <p>
-        I'm always interested in getting feedback or hearing about new projects, so if you'd like to
-        have a chat, please don't hesitate to get in touch. Send me a message,
-        or connect me on my socials.
-      </p>
-      <div className='contact-form'>
-        {isSuccess && (
-          <p className='form-feedback' id='success'>
-            {success}
+      <div id='contact-content'>
+        <div id='text'>
+          <p>
+            I'm always interested in getting feedback or hearing about new
+            projects, so if you'd like to have a chat, please don't hesitate to
+            get in touch. Send me a message, or connect with me on my socials.
           </p>
-        )}
-        {isError && (
-          <p className='form-feedback' id='error'>
-            {error}
-          </p>
-        )}
-        <form ref={form} onSubmit={sendForm}>
-          <input
-            type='text'
-            name='name'
-            placeholder='Name'
-            id='name'
-            className='cool-border'
-            required
-          />
-          <input
-            type='email'
-            name='email'
-            placeholder='Email'
-            id='email'
-            className='cool-border'
-            required
-          />
-          <textarea
-            name='message'
-            placeholder='Message'
-            id='message'
-            className='cool-border'
-            required
-          ></textarea>
-          <input type='submit' value='SEND' id='send' />
-        </form>
+        </div>
+        <div className='contact-form'>
+          {isSuccess && (
+            <p className='form-feedback' id='success'>
+              {success}
+            </p>
+          )}
+          {isError && (
+            <p className='form-feedback' id='error'>
+              {error}
+            </p>
+          )}
+          <form ref={form} onSubmit={sendForm}>
+            <input
+              type='text'
+              name='name'
+              placeholder='Name'
+              id='name'
+              className='cool-border'
+              required
+            />
+            <input
+              type='email'
+              name='email'
+              placeholder='Email'
+              id='email'
+              className='cool-border'
+              required
+            />
+            <textarea
+              name='message'
+              placeholder='Message'
+              id='message'
+              className='cool-border'
+              required
+            ></textarea>
+            <input type='submit' value='SEND' id='send' />
+          </form>
+        </div>
       </div>
 
       <div id='social-links'>
