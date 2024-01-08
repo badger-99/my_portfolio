@@ -2,6 +2,11 @@ import { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import {
   FaBars,
+  FaHouse,
+  FaUser,
+  FaFileCode,
+  FaBriefcase,
+  FaEnvelope,
   FaX,
   FaGithub,
   FaLinkedinIn,
@@ -18,7 +23,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setMobile(window.innerWidth<768);
+      setMobile(window.innerWidth < 768);
     };
     window.addEventListener('resize', handleResize);
 
@@ -57,7 +62,8 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              Home
+              <span className='nav-label'>Home</span>
+              <FaHouse className='nav-icon' />
             </NavLink>
 
             <NavLink
@@ -65,7 +71,8 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              About
+              <span className='nav-label'>About Me</span>
+              <FaUser className='nav-icon' />
             </NavLink>
 
             <NavLink
@@ -73,7 +80,8 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              Resumé
+              <span className='nav-label'>Resumé</span>
+              <FaFileCode className='nav-icon' />
             </NavLink>
 
             <NavLink
@@ -81,7 +89,8 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              Projects
+              <span className='nav-label'>Projects</span>
+              <FaBriefcase className='nav-icon' />
             </NavLink>
 
             <NavLink
@@ -89,42 +98,55 @@ const Navbar = () => {
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              Contact
+              <span className='nav-label'>Contact</span>
+              <FaEnvelope className='nav-icon' />
             </NavLink>
           </div>
 
           <div id='social-links'>
+            <div className='nav-soc-link-container'>
             <a
               target='_blank'
               rel='noreferer'
               href='https://linkedin.com/in/alfredmkg'
             >
-              <FaLinkedinIn />
+                <span className='nav-soc-label'>LinkedIn</span>
+                <FaLinkedinIn className='nav-soc-icon' />
             </a>
+              </div>
 
+              <div className='nav-soc-link-container'>
             <a
               target='_blank'
               rel='noreferer'
               href='https://github.com/badger-99'
             >
-              <FaGithub />
+                <span className='nav-soc-label'>GitHub</span>
+                <FaGithub className='nav-soc-icon' />
             </a>
+              </div>
 
+              <div className='nav-soc-link-container'>
             <a
               target='_blank'
               rel='noreferer'
               href='https://twitter.com/AlfredMkg'
             >
-              <FaXTwitter />
+                <span className='nav-soc-label'>X/Twitter</span>
+                <FaXTwitter className='nav-soc-icon' />
             </a>
+              </div>
 
+              <div className='nav-soc-link-container'>
             <a
               target='_blank'
               rel='noreferer'
               href='https://medium.com/@alfred.mkg'
             >
-              <FaMedium />
+                <span className='nav-soc-label'>Medium</span>
+                <FaMedium className='nav-soc-icon' />
             </a>
+              </div>
           </div>
         </div>
       </nav>
