@@ -17,7 +17,7 @@ const About = () => {
             playing in the background.
           </p>
           <p>
-            My curiosity ia among my stronger positive qualities. It's the
+            My curiosity is among my stronger positive qualities. It's the
             reason I rarely walk away from something new without learning
             (about) it or attempting to do it, and it's the reason I got into
             programming.
