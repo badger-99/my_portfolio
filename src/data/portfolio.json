@@ -2,9 +2,19 @@
 {
   "portfolio": [
     {
+      "Cover": "portfolio_images/WorkspaceReservations.PNG",
+      "Title": "Workspace Reservation",
+      "Stack": "React, Redux, Ruby on rails, PostgreSQL",
+      "Description": "Coworking space owners manage their spaces, users make reservations",
+      "Demo": "https://zilola-nazarova.github.io/workspace-reservation-front-end",
+      "Code": "https://github.com/badger-99/workspace-reservation-back-end",
+      "id": 1
+    },
+
+    {
       "Cover": "portfolio_images/CryptoMarketRankings.PNG",
       "Title": "Crypto Market Rankings",
-      "Stack": "React, React Router, Redux, CSS",
+      "Stack": "React, Redux, CSS",
       "Description": "Get key market stats on the current top100 cryptocurrencies.",
       "Demo": "https://crypto-marketcap-rankings.netlify.app/",
       "Code": "https://github.com/badger-99/crypto-marketcap-rankings",
@@ -14,7 +24,7 @@
     {
       "Cover": "portfolio_images/SpaceTravellersHub.PNG",
       "Title": "Space Travellers Hub",
-      "Stack": "React, React Router, Redux, CSS",
+      "Stack": "React, Redux",
       "Description": "Sign up for missions in Space, and reserve a rocket of your choosing.",
       "Demo": "https://cosmic-missions.onrender.com/",
       "Code": "https://github.com/badger-99/space-travelers-hub",
