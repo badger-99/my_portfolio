@@ -39,7 +39,7 @@ const Skills = () => {
               <li>Responsive/Mobile-first design</li>
             </ul>
           </div>
-          <Link to='/resume' id='link'>
+          <Link to='/resume' id='resume-link'>
             resumé
           </Link>
         </div>

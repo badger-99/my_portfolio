@@ -8,7 +8,7 @@
 
   #header {
     margin-bottom: 1rem;
-
+    text-align: center;
     h1 {
       color: $blue;
       font-size: 3rem;
@@ -21,31 +21,32 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      position: relative;
+      // position: relative;
       font-size: 1.02rem;
 
-      .skill{
-        // text-align: center;
-        h3{
+      .skill {
+        text-align: center;
+        h3 {
+          font-family: 'ProximaVova-Bold', sans-serif;
           color: $blue;
         }
 
-        ul{
-          li{
+        ul {
+          li {
             list-style: none;
 
-            &:before{
-              content: "\2023 \0020";
-              font-size: 1.2rem;
-            }
+            // &:before{
+            //   content: "\2023 \0020";
+            //   font-size: 1.2rem;
+            // }
           }
         }
       }
 
-      #link {
-        position: absolute;
-        bottom: -4.5rem; //originally 3.5
-        right: 0;
+      #resume-link {
+        // position: absolute;
+        margin: 3.5rem auto 0;
+        width: fit-content;
         text-decoration: none;
         text-transform: capitalize;
         font-family: 'Proxima-Nova-Bold', sans-serif;
@@ -83,7 +84,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-top: 9rem; //originally 5
+      margin-top: 5rem;
       padding-top: 2rem; // increase by 2rem for larger screens
       width: 100%;
       // height: 100%; // increase by 5-10 rem for larger screens
