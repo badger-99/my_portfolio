@@ -1,0 +1,18 @@
+
+      .skill{
+        // text-align: center;
+        h3{
+          color: $blue;
+        }
+
+        ul{
+          li{
+            list-style: none;
+
+            &:before{
+              content: "\2023 \0020";
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
