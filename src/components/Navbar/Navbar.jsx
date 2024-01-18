@@ -4,7 +4,7 @@ import {
   FaBars,
   FaHouse,
   FaUser,
-  FaFileCode,
+  FaGear,
   FaBriefcase,
   FaEnvelope,
   FaX,
@@ -76,12 +76,12 @@ const Navbar = () => {
             </NavLink>
 
             <NavLink
-              to='resume'
+              to='skills'
               className='navlink'
               onClick={() => setShowNav(false)}
             >
-              <span className='nav-label'>Resumé</span>
-              <FaFileCode className='nav-icon' />
+              <span className='nav-label'>Skills</span>
+              <FaGear className='nav-icon' />
             </NavLink>
 
             <NavLink
@@ -107,7 +107,7 @@ const Navbar = () => {
             <div className='nav-soc-link-container'>
             <a
               target='_blank'
-              rel='noreferer'
+              rel='noreferrer'
               href='https://linkedin.com/in/alfredmkg'
             >
                 <span className='nav-soc-label'>LinkedIn</span>
@@ -118,7 +118,7 @@ const Navbar = () => {
               <div className='nav-soc-link-container'>
             <a
               target='_blank'
-              rel='noreferer'
+              rel='noreferrer'
               href='https://github.com/badger-99'
             >
                 <span className='nav-soc-label'>GitHub</span>
@@ -129,7 +129,7 @@ const Navbar = () => {
               <div className='nav-soc-link-container'>
             <a
               target='_blank'
-              rel='noreferer'
+              rel='noreferrer'
               href='https://twitter.com/AlfredMkg'
             >
                 <span className='nav-soc-label'>X/Twitter</span>
@@ -140,7 +140,7 @@ const Navbar = () => {
               <div className='nav-soc-link-container'>
             <a
               target='_blank'
-              rel='noreferer'
+              rel='noreferrer'
               href='https://medium.com/@alfred.mkg'
             >
                 <span className='nav-soc-label'>Medium</span>
