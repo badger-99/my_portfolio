@@ -103,51 +103,51 @@
   }
 }
 
-@media screen and (min-width: 1080px) {
-  #cube-container {
-    #cube-spinner {
-      transform-origin: 80px 80px 0; // increase by 20px for larger screens
-      margin-left: calc(50% - 80px); // increase by 20px for larger screens
+// @media screen and (min-width: 1080px) {
+//   #cube-container {
+//     #cube-spinner {
+//       transform-origin: 80px 80px 0; // increase by 20px for larger screens
+//       margin-left: calc(50% - 80px); // increase by 20px for larger screens
 
-      .faces {
-        width: 160px; // increase by 40px for larger screens
-        height: 160px; // increase by 40px for larger screens
-        font-size: 140px; // increase by 40px for larger screens
-      }
+//       .faces {
+//         width: 160px; // increase by 40px for larger screens
+//         height: 160px; // increase by 40px for larger screens
+//         font-size: 140px; // increase by 40px for larger screens
+//       }
 
-      // increase translateZ by 20px for larger screens
-      #face1 {
-        transform: translateZ(80px);
-      }
-      #face2 {
-        transform: rotateY(90deg) translateZ(80px);
-      }
-      #face3 {
-        transform: rotateY(90deg) rotateX(90deg) translateZ(80px);
-      }
-      #face4 {
-        transform: rotateY(180deg) rotateZ(90deg) translateZ(80px);
-      }
-      #face5 {
-        transform: rotateY(-90deg) rotateZ(90deg) translateZ(80px);
-      }
-      #face6 {
-        transform: rotateX(-90deg) translateZ(80px);
-      }
-    }
+//       // increase translateZ by 20px for larger screens
+//       #face1 {
+//         transform: translateZ(80px);
+//       }
+//       #face2 {
+//         transform: rotateY(90deg) translateZ(80px);
+//       }
+//       #face3 {
+//         transform: rotateY(90deg) rotateX(90deg) translateZ(80px);
+//       }
+//       #face4 {
+//         transform: rotateY(180deg) rotateZ(90deg) translateZ(80px);
+//       }
+//       #face5 {
+//         transform: rotateY(-90deg) rotateZ(90deg) translateZ(80px);
+//       }
+//       #face6 {
+//         transform: rotateX(-90deg) translateZ(80px);
+//       }
+//     }
 
-    #shadow {
-      width: 240px; // increase by 40px for larger screens
-      height: 165px; // increase by 40px for larger screens
-      right: -120px;
-    }
+//     #shadow {
+//       width: 240px; // increase by 40px for larger screens
+//       height: 165px; // increase by 40px for larger screens
+//       right: -120px;
+//     }
 
-    #snow {
-      right: -10rem;
-      width: 20rem;
-    }
-  }
-}
+//     #snow {
+//       right: -10rem;
+//       width: 20rem;
+//     }
+//   }
+// }
 
 // @media screen and (min-width: 1200px) {
 //   #cube-container {

@@ -101,38 +101,63 @@
 
 @media screen and (min-width: 860px) {
   #skills {
-    max-width: 80rem;
+    max-width: 48rem;
     margin-bottom: 10rem;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
     #skills-content {
+      // border: 1px solid yellow;
       display: flex;
       flex-direction: row;
       align-items: flex-start;
-      justify-content: space-between;
-      gap: 3rem;
+      gap: 20rem;
+      // justify-content: space-between;
       #skills-list {
-        max-width: 50%;
+        // border-left: 1px solid;
+        // border-right: 1px solid;
+        width: fit-content;
         margin-top: 2rem;
-        margin-left: 1rem;
         font-size: 1.2rem;
-        #link {
-          right: auto;
-          left: 0;
-          left: -1rem;
-          bottom: -9rem;
+        #resume-link {
+          margin: 6rem auto 0;
         }
       }
 
       #cube-section {
+        // border: 1px solid red;
         margin-top: 0;
         padding-top: 0;
         height: 4rem;
+        width: fit-content;
       }
     }
   }
 
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1000px) {
     #skills {
-      max-width: 200rem;
+      max-width: 54rem;
+      #skills-content {
+        gap: 26rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1100px) {
+    #skills {
+      max-width: 60rem;
+      #skills-content {
+        gap: 32rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    #skills {
+      max-width: 68rem;
+      #skills-content {
+        gap: 40rem;
+      }
     }
   }
 }
