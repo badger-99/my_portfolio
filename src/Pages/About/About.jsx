@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 import './about.scss';
-import Cube from '../../components/cube/Cube';
-import Particles from '../../components/Particles/Particles';
 
 const About = () => {
   return (
@@ -28,12 +26,11 @@ const About = () => {
             enjoying a sci-fi film or show, or looking for a good rush that
             doesn't involve bugs and a hard deadline.
           </p>
-          <Link to='/resume' id='link'>
-            resumé
+          <Link to='/skills' id='link'>
+            Skills
           </Link>
         </div>
-        <div id='cube-section'>
-          <Cube />
+        <div id='canvas'>
         </div>
       </div>
     </section>
