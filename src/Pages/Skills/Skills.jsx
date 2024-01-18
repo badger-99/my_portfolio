@@ -10,23 +10,35 @@ const Skills = () => {
       </div>
       <div id='skills-content'>
         <div id='skills-list'>
-          <p>
-            I enjoy creating front and back-end components that integrate
-            seamlessly over a nice cup of coffee, and sometimes with some music
-            playing in the background.
-          </p>
-          <p>
-            My curiosity is among my stronger positive qualities. It's the
-            reason I rarely walk away from something new without learning
-            (about) it or attempting to do it, and it's the reason I got into
-            programming.
-          </p>
-          <p>
-            When I'm not dealing with code or reading, you'll most likely find
-            me either trying or modifying a recipe, volunteering somewhere,
-            enjoying a sci-fi film or show, or looking for a good rush that
-            doesn't involve bugs and a hard deadline.
-          </p>
+          <div className='skill'>
+            <h3>Front-end</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>HTML</li>
+              <li>SCSS</li>
+            </ul>
+          </div>
+          
+          <div className='skill'>
+            <h3>Back-end</h3>
+            <ul>
+              <li>Ruby</li>
+              <li>Ruby On Rails</li>
+              <li>Python</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+          
+          <div className='skill'>
+            <h3>Tools & Methods</h3>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Responsive/Mobile-first design</li>
+            </ul>
+          </div>
           <Link to='/resume' id='link'>
             resumé
           </Link>
