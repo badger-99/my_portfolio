@@ -33,7 +33,7 @@ const About = () => {
             Skills
           </Link>
         </div>
-        <div id='canvas'>
+        <div id='canvasContainer'>
           <WordCloud />
         </div>
       </div>
