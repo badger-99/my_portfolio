@@ -37,6 +37,16 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script type="text/javascript" src="./dist/TagCloud.min.js"></script>
+    <script src="tagcanvas.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        try {
+          TagCanvas.Start('myCanvas');
+        } catch (e) {
+          // something went wrong, hide the canvas container
+          document.getElementById('canvasContainer').style.display = 'none';
+        }
+      };
+    </script>
   </body>
 </html>
