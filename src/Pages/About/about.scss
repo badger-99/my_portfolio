@@ -54,7 +54,7 @@
       }
     }
 
-    #cube-section {
+    #canvas {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -71,6 +71,14 @@
 @media screen and (min-width: 768px) {
   #about {
     padding: 2rem 1.5rem 0;
+    
+    // #about-content{
+    //   #text{
+    //     #link{
+    //       display: none;
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -97,7 +105,7 @@
         }
       }
 
-      #cube-section {
+      #canvas {
         margin-top: 0;
         padding-top: 0;
         height: 4rem;
