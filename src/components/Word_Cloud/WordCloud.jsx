@@ -26,8 +26,8 @@ const WordCloud = () => {
       ];
 
       const radiusValue = () => {
-        if (window.screen.width < 768) {
-          radii = 150;
+        if (window.screen.width < 480) {
+          radii = 148;
         } else {
           radii = 200;
         }
