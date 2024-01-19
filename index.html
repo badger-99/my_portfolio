@@ -33,11 +33,30 @@
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
     <title>Alfred M.</title>
-    <script type="module" crossorigin src="/assets/index-VLJBIfTQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-jvG_eTBD.css">
+    <script type="module" crossorigin src="/assets/index-xUdb-4IM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-7NraDRVq.css">
   </head>
   <body>
     <div id="root"></div>
-    <!-- <script type="text/javascript" src="./dist/TagCloud.min.js"></script> -->
+    <script src="tagcanvas.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        let options = {
+          textColour: '#ebebeb',
+          textHeight: 32,
+          depth: 0.5,
+          initial: [1.000, -0.330],
+          maxSpeed: 0.015,
+          minSpeed: 0.2,
+          noSelect: true,
+        };
+        try {
+          TagCanvas.Start('myCanvas', '', options);
+        } catch (e) {
+          // something went wrong, hide the canvas container
+          document.getElementById('canvasContainer').style.display = 'none';
+        }
+      };
+    </script>
   </body>
 </html>
