@@ -6,6 +6,7 @@ const WordCloud = () => {
   useEffect(() => {
     return () => {
       const container = '.tagcloud';
+      let radii;
       const text = [
         'HTML',
         'CSS',
@@ -24,8 +25,17 @@ const WordCloud = () => {
         // 'Remote Pair-Programming',
       ];
 
+      const radiusValue = () => {
+        if (window.screen.width < 768) {
+          radii = 150;
+        } else {
+          radii = 200;
+        }
+        return radii;
+      };
+
       const options = {
-        radius: 150,
+        radius: radiusValue(),
         maxSpeed: 'normal',
         initSpeed: 'fast',
         keep: true,
@@ -33,13 +43,10 @@ const WordCloud = () => {
 
       TagCloud(container, text, options);
 
-      return () => {
-      };
+      return () => {};
     };
   });
 
-  return (
-      <span className='tagcloud'></span>
-  );
+  return <span className='tagcloud'></span>;
 };
 export default WordCloud;
