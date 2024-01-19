@@ -1,20 +1,21 @@
-// import { useEffect } from 'react';
-// import TagCloud from 'TagCloud';
-
 const WordCloud = () => {
-  
+  const canvasStyle = {
+    width: '100%',
+    height: '100%',
+  };
+
   return (
-    <canvas width='74' height='74' id='myCanvas'>
+    <canvas width='750' height='750' id='myCanvas' style={canvasStyle}>
       <a href='#'>HTML</a>
       <a href='#'>CSS</a>
       <a href='#'>SASS</a>
       <a href='#'>JavaScript</a>
+      <a href='#'>PostgreSQL</a>
       <a href='#'>React</a>
       <a href='#'>Redux</a>
       <a href='#'>Ruby</a>
-      <a href='#'>Ruby on Rails</a>
-      <a href='#'>PostgreSQL</a>
       <a href='#'>Python</a>
+      <a href='#'>Ruby on Rails</a>
       <a href='#'>Git</a>
       <a href='#'>GitHub</a>
     </canvas>
