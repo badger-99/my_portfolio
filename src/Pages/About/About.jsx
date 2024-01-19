@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+import WordCloud from '../../components/Word_Cloud/wordCloud';
 import './about.scss';
 
 const About = () => {
+  
+
   return (
     <section className='pages' id='about'>
       <div id='header'>
@@ -31,6 +34,7 @@ const About = () => {
           </Link>
         </div>
         <div id='canvas'>
+          <WordCloud />
         </div>
       </div>
     </section>
