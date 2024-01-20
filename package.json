@@ -22,7 +22,8 @@
     "react-icons": "^4.12.0",
     "react-pdf": "^7.6.0",
     "react-router-dom": "^6.19.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "TagCloud": "^2.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
