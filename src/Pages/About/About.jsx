@@ -1,9 +1,27 @@
 import { Link } from 'react-router-dom';
 import WordCloud from '../../components/Word_Cloud/wordCloud';
 import './about.scss';
+import { useEffect } from 'react';
 
 const About = () => {
-  
+  useEffect(() => {
+    let options = {
+      textColour: '#ebebeb',
+      textHeight: 32,
+      depth: 0.5,
+      initial: [1.0, -0.33],
+      maxSpeed: 0.015,
+      minSpeed: 0.2,
+      noSelect: true,
+    };
+
+    try {
+      TagCanvas.Start('myCanvas', '', options);
+    } catch (e) {
+      // something went wrong, handle the error or hide the canvas container
+      document.getElementById('myCanvas').style.display = 'none';
+    }
+  }, []);
 
   return (
     <section className='pages' id='about'>
